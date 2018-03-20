@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: User-Service
+  profiles:
+    active: development
+
+
+server:
+  port: 8080
+
+
+
+management:
+  security:
+    enabled: false
+
+
