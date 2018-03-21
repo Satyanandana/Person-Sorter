@@ -2,7 +2,7 @@ Dynamic Sort
 
 We can sort the given Person class objects, based on any one field in a dynamic way. The following are the approaches.
 1.	Implementing a custom dynamic comparator using Reflections.
-This approach is an overkill for this example considering the effect on performance while using Reflections due to runtime evaluation of method name and increased number of method calls.And we need to take special care to handle runtime exceptions due to inconsistant method signatures. I would prefer this approach only if we are trying to create a generic API like Apache BeanComparator.
+This approach is an overkill for this example considering the effect on performance while using Reflections due to runtime evaluation of method name and increased number of method calls.And we need to take special care to handle runtime exceptions in case of inconsistent method signatures. I would prefer this approach only if we are trying to create a generic API like Apache BeanComparator.
 2.	Using Apache BeanComparator Implementation which internally uses Reflections.
 This approach is an overkill for this example considering the effect on performance while using Reflections. I would prefer this approach only if we are trying to sort many type of objects with standard method signature for setters and getters.
 3.	Generate a separate Comparator for each field.
